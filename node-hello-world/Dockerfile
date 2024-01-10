@@ -13,9 +13,9 @@ RUN npm install
 
 COPY . .
 
-RUN echo 'The port is ${PHILPORT}'
+RUN echo 'The port is $PHILPORT'
 
-EXPOSE ${PHILPORT}
+EXPOSE $PHILPORT
 
 # command to run on container start
 CMD [ "node", "./bin/www" ]
