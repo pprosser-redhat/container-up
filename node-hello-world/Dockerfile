@@ -2,8 +2,9 @@ FROM node:14
 
 WORKDIR /usr/src/app
 
-ARG PHILPORT=8080
+ARG PHILPORT
 ENV NODE_ENV production
+ENV TEST2=value2
 
 # Just copy the package.json...
 COPY package*.json ./
@@ -13,7 +14,8 @@ RUN npm install
 
 COPY . .
 
-RUN echo 'The port is $PHILPORT'
+RUN echo "The port is $PHILPORT"
+RUN echo "The value is $TEST2"
 
 EXPOSE $PHILPORT
 
