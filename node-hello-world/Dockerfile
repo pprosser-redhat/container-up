@@ -2,7 +2,7 @@ FROM node:14
 
 WORKDIR /usr/src/app
 
-ENV PHILPORT 8080
+ENV PHILPORT=8080
 ENV NODE_ENV production
 ENV TEST2=value2
 
