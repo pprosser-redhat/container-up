@@ -13,6 +13,8 @@ RUN npm install
 
 COPY . .
 
+RUN echo 'The port is ${PHILPORT}'
+
 EXPOSE ${PHILPORT}
 
 # command to run on container start
