@@ -19,7 +19,7 @@ COPY . .
 RUN echo "The port is ${TEST}"
 RUN echo "The value is ${TEST2}"
 
-EXPOSE ${TEST}
+EXPOSE 8080
 
 # command to run on container start
 CMD [ "node", "./bin/www" ]
