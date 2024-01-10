@@ -2,6 +2,7 @@ FROM node:14
 
 WORKDIR /usr/src/app
 
+ARG PHILPORT 8080
 ENV NODE_ENV production
 
 # Just copy the package.json...
@@ -12,7 +13,7 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 8080
+EXPOSE ${PHILPORT}
 
 # command to run on container start
 CMD [ "node", "./bin/www" ]
